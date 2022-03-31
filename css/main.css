@@ -1,0 +1,543 @@
+/* ######################### CODE MAP ############################# */
+
+
+/* ======================= general mods =========================== */
+
+
+/* ======================= header mods ============================ */
+
+
+/* ======================= main mods ============================ */
+
+
+/* ======================= footer mods========================= */
+
+
+/* ############################################################### */
+
+
+/* ===================== general mods ====================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --mLight: rgb(233, 233, 233);
+    --mDark: rgb(56, 56, 56);
+    --mlBlue: rgb(98, 124, 139);
+    --mlPink: rgb(179, 18, 112);
+    --mlGreen: rgb(27, 228, 121);
+    --mdBlue: rgb(16, 69, 100);
+    --mdGreen: rgb(17, 129, 69);
+    /* font-size: 20px; */
+    color: var(--mDark);
+}
+
+body {
+    background: var(--mLight);
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: "raleway", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 30px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(93, 93, 93, 0.4);
+}
+
+
+/* ===================== defaults ====================== */
+
+img {
+    width: 100%;
+}
+
+.dishid {
+    display: none;
+}
+
+.txt {
+    color: var(--mDark);
+}
+
+a {
+    color: var(--mLight);
+}
+
+.meni {
+    background: var(--mdBlue);
+}
+
+.femini {
+    background: var(--mlPink);
+}
+
+.scroX {
+    width: 100vw;
+    overflow-x: auto;
+}
+
+button {
+    max-width: 15rem;
+    padding: 5px;
+}
+
+button:active {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+
+/* ================== header mods ===================== */
+
+header {
+    /* padding: 5px; */
+    width: 100%;
+    height: 100vh;
+    background-image: url('../imgs/w3images/notebook.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 7px -3px rgba(0, 0, 0, 0.6);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/* ----------------------- nav ---------------------------- */
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo a {
+    background: var(--mLight);
+    color: var(--mDark);
+    border-radius: 10px;
+    padding: 5px 7px;
+    box-shadow: 3px 4px 7px -2px black;
+}
+
+.logo a:last-child {
+    /* opacity: 0; */
+    background: none;
+    color: var(--mlBlue);
+    font-family: bradley hand ITC;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    box-shadow: none;
+}
+
+.strech {
+    position: fixed;
+    right: 0;
+    top: 10px;
+    padding: 0px 15px;
+    width: 50vw;
+    height: 40px;
+    z-index: 100;
+}
+
+.search {
+    padding: 5px;
+    position: absolute;
+    right: 5px;
+    top: 55px;
+    display: flex;
+    font-size: 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0);
+    transition: all 1s ease-in-out;
+}
+
+.sInp {
+    width: 0vw;
+    background: none;
+    transition: all 1s ease-in-out;
+}
+
+.icon {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+}
+
+.icon .circ {
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 3px 4px 7px -2px black;
+}
+
+.icon .bar {
+    /* float: right; */
+    width: 5px;
+    height: 20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 15px;
+    transform: rotate(-50deg);
+    box-shadow: 3px 4px 7px -1px black;
+}
+
+.mobMenu {
+    float: right;
+    /* display: none; */
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    /* background: red; */
+}
+
+.mobMenu>div {
+    width: 100%;
+    height: 20%;
+    background: white;
+    box-shadow: 3px 4px 7px -1px black;
+    margin-bottom: 15%;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.sel {
+    position: absolute;
+    right: 15px;
+}
+
+.sel>div {
+    background: blanchedalmond;
+}
+
+.sel div:first-child {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 45%;
+}
+
+.sel div:nth-child(2) {
+    opacity: 0;
+}
+
+.sel div:last-child {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 45%;
+}
+
+.ulBg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+    transition: all 0.5s ease-in-out;
+    /* border-bottom-left-radius: 350px; */
+    z-index: 99;
+}
+
+header .wid {
+    width: 50vw;
+}
+
+li {
+    /* display: inline-block; */
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+li.active {
+    background: rgba(66, 115, 122, 0.6);
+}
+
+li:hover {
+    background: rgba(66, 115, 122, 1);
+}
+
+li:active {
+    transform: scale(0.9);
+}
+
+li a {
+    color: honeydew;
+}
+
+
+/* ----------------------- hContent ---------------------------- */
+
+.hContent {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: var(--mLight);
+    height: 50%;
+}
+
+.hContent h1 {
+    text-shadow: 1px 3px 4px black;
+    color: rgb(255, 255, 255);
+}
+
+.hContent .img {
+    opacity: 0;
+}
+
+.hContent span {
+    /* color: var(--mlBlue); */
+    font-weight: bolder;
+}
+
+button {
+    color: whitesmoke;
+    margin: 50px 0;
+    width: 80%;
+    padding: 10px 0px;
+    border-radius: 30px;
+    background: var(--mlBlue);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    overflow: hidden;
+}
+
+.hContent a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =================== header end here ========================== */
+
+
+/* ======================= main mods ======================= */
+
+.sTitle {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.sTitle p {
+    padding: 5px 0px;
+}
+
+.sTitle div {
+    width: 60%;
+    height: 1px;
+    background: var(--mDark);
+}
+
+.sTitle div:first-child {
+    float: right;
+}
+
+
+/* ----------------------- mOne ---------------------------- */
+
+.mOne {
+    padding-top: 50px;
+}
+
+.sHead {
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutContent {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.aboutContent .txt {
+    line-height: 1.8rem;
+}
+
+.aboutContent b {
+    font-size: 1.5rem;
+    position: absolute;
+    font-style: italic;
+    z-index: -1;
+}
+
+.aboutContent pre {
+    display: inline;
+}
+
+
+/* ----------------------- mTwo ------------------------- */
+
+.mTwo {
+    padding-top: 50px;
+}
+
+.hp {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px;
+    color: var(--mLight);
+    font-size: 0.8rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px 7px -1px rgba(0, 0, 0, 0.7);
+}
+
+.img-li {
+    margin: 10px 0px;
+    min-width: 150vw;
+    display: flex;
+}
+
+.img-li .img {
+    /* display: flex; */
+    aspect-ratio: 1/1;
+    margin-left: 10px;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.nAs img {
+    aspect-ratio: 50/51;
+}
+
+
+/* ----------------------- mThree ---------------------------- */
+
+.mThree {
+    padding-top: 50px;
+}
+
+.contact {
+    width: 90%;
+    /* max-width: 500px; */
+    min-height: 400px;
+    margin: 50px auto 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background: var(--mDark); */
+}
+
+.cont {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cont p {
+    padding-top: 10px;
+    line-height: 1.7rem;
+}
+
+.bdr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(39, 39, 39);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.contact .ico {
+    width: 25px;
+    height: 25px;
+}
+
+.contact .ico img {
+    /* aspect-ratio: 1/1; */
+    filter: invert(80%);
+}
+
+.input {
+    width: 400px;
+    margin: auto;
+    /* background: red; */
+}
+
+.input input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: none;
+    border: 1px solid var(--mDark);
+    border-radius: 30px;
+}
+
+.input textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: none;
+    border: 1px solid var(--mDark);
+    border-radius: 5px;
+}
+
+.input button {
+    display: block;
+    margin: 5px auto;
+    background: dodgerblue;
+}
+
+
+/* =================== main end here ========================== */
+
+
+/* ======================= footer mods========================= */
+
+footer {
+    /* height: 40vh; */
+    margin-top: 100px;
+    color: var(--mLight);
+    padding: 10px;
+    width: 100%;
+    background: rgb(85, 85, 85);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* =================== footer end here ========================== */
