@@ -16,7 +16,13 @@ if (winW < 600) {
     search = document.querySelector(".icon");
     sInpu = document.querySelector(".sInp");
     li = document.querySelectorAll("li");
-    console.log(li)
+
+    setInterval(() => {
+        header.style.backgroundImage = "url('imgs/web/ns.jpeg')";
+    }, 10000)
+    setInterval(() => {
+        header.style.backgroundImage = "url('imgs/web/ScreenShot2022-01-11at4.39.32PM_800x.png')";
+    }, 20000)
 
     window.addEventListener("scroll", () => {
         let headPos = header.getBoundingClientRect().bottom;

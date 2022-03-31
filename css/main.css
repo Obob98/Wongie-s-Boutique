@@ -50,6 +50,11 @@ body {
     font-family: "raleway", sans-serif;
 }
 
+.wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     display: none;
     width: 30px;
@@ -109,7 +114,7 @@ header {
     /* padding: 5px; */
     width: 100%;
     height: 100vh;
-    background-image: url('../imgs/w3images/notebook.jpg');
+    background-image: url('../imgs/web/ScreenShot2022-01-11at4.39.32PM_800x.png');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -294,6 +299,8 @@ li:active {
 
 li a {
     color: honeydew;
+    width: 100%;
+    display: block;
 }
 
 
@@ -371,7 +378,7 @@ button {
 /* ----------------------- mOne ---------------------------- */
 
 .mOne {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .sHead {
@@ -405,7 +412,7 @@ button {
 /* ----------------------- mTwo ------------------------- */
 
 .mTwo {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .hp {
@@ -441,12 +448,11 @@ button {
 /* ----------------------- mThree ---------------------------- */
 
 .mThree {
-    padding-top: 50px;
+    padding-top: 80px;
 }
 
 .contact {
     width: 90%;
-    /* max-width: 500px; */
     min-height: 400px;
     margin: 50px auto 5px;
     display: flex;
@@ -492,7 +498,7 @@ button {
 }
 
 .input {
-    width: 400px;
+    width: 300px;
     margin: auto;
     /* background: red; */
 }
@@ -520,6 +526,35 @@ button {
     display: block;
     margin: 5px auto;
     background: dodgerblue;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cards img {
+    filter: brightness(0.7);
+}
+
+.cards .txt {
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+
+.cards p {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    /* text-shadow: 0px 3px 7px black; */
+    margin-bottom: 20px;
+}
+
+.cards a {
+    color: rgb(37, 37, 37);
+    background: rgb(255, 255, 255);
+    padding: 10px;
 }
 
 
