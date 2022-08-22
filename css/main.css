@@ -138,6 +138,7 @@ header {
     justify-content: space-between;
     padding: 15px;
     width: 100%;
+    z-index: 9999;
 }
 
 .logo {
