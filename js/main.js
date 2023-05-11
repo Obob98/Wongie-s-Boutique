@@ -1,6 +1,10 @@
 let menu, ulBg, nav, prevScrollPos, inp, search, li, winW, body, imgs;
 
 winW = window.innerWidth;
+window.addEventListener('resize', () => {
+    winW = window.innerWidth;
+    window.location.reload();
+});
 
 if (winW < 600) {
     menu = document.querySelector(".mobMenu");
@@ -22,7 +26,7 @@ if (winW < 600) {
             header.style.backgroundImage = imgs[i];
             i = 0;   
         }
-    }, 5000);
+    }, 3000);
 
     window.addEventListener("scroll", () => {
         let headPos = header.getBoundingClientRect().bottom;
